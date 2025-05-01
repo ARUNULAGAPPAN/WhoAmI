@@ -1,0 +1,150 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Default body font */
+    background-color: #007bff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #dcd3d3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center; /* Center text */
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px auto;
+    border: 3px solid #66a7ed; /* Blue border for profile photo */
+}
+
+/* Main Title */
+h1 {
+    font-family: 'Poppins', sans-serif; /* Heading font */
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #007bff; /* Primary blue color */
+}
+
+/* Subtitle */
+h2 {
+    font-family: 'Poppins', sans-serif; /* Heading font */
+    text-align: center;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Body text font */
+}
+
+/* Headings for Sections */
+h3 {
+    font-family: 'Poppins', sans-serif; /* Heading font */
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Projects and Certifications Grid */
+.projects-grid, .certifications-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center the items in the grid */
+}
+
+.project-box, .certification-box {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 calc(50% - 40px); /* 50% width minus spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the text inside the boxes */
+}
+
+.project-box h3, .certification-box h3 {
+    font-family: 'Poppins', sans-serif; /* Heading font */
+    color: #007bff;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.project-box p, .certification-box p {
+    font-size: 1.1em;
+    line-height: 1.4;
+    font-family: 'Roboto', sans-serif; /* Body text font */
+}
+
+/* Organizations Grid */
+.organizations-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between boxes */
+    justify-content: center; /* Center the items in the grid */
+    margin-top: 20px; /* Space above the grid */
+}
+
+/* Individual Organization Box */
+.organization-box {
+    background-color: #f1f1f1; /* Background color for boxes */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside boxes */
+    width: 250px; /* Fixed width for each box */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    text-align: center; /* Center the text inside the boxes */
+}
+
+.organization-box h3 {
+    color: #007bff; /* Color for organization titles */
+    font-size: 1.4em; /* Font size for headings */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.organization-box p {
+    font-size: 1em; /* Font size for paragraphs */
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+/* Adjust Project and Certification box width on smaller screens */
+@media (max-width: 600px) {
+    .project-box, .certification-box {
+        flex: 1 1 100%;
+    }
+    
+    .organization-box {
+        flex: 1 1 100%; /* Make organization boxes full width on small screens */
+    }
+}

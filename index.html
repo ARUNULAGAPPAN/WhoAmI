@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Am I</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to style.css -->
+    <script src="script.js" defer></script> <!-- Link to script.js -->
+    <style>
+        /* Chatbot Styles */
+        #chatbot {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background-color: #f1f1f1;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        
+        /* Chatbot Header for dragging */
+        #chatbotHeader {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            cursor: move;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            text-align: center;
+        }
+
+        /* Chatbot Body */
+        #chatbotBody {
+            height: 320px;
+            padding: 10px;
+            overflow-y: auto;
+        }
+
+        /* Input area */
+        #chatbotInputArea {
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+
+        #chatbotInput {
+            width: 80%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #sendButton {
+            padding: 8px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .chatbot-message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .user-message {
+            background-color: #007bff;
+            color: white;
+            text-align: right;
+        }
+
+        .bot-message {
+            background-color: #e7f3ff;
+            text-align: left;
+        }
+    </style>
+<body>
+    <div class="container">
+        <!-- Profile Photo -->
+        <img src="pic.jpg" alt="Profile Photo" class="profile-photo"> <!-- Replace with actual photo path -->
+       <center>
+        <!-- Main Title -->
+        <h1>ARUN ULAGAPPAN</h1>
+        
+        <!-- Quote -->
+        <h2>Who Am I?</h2>
+        <p><strong>Always follow your passion; never doubt about realism that holds you back.</strong></p>
+        
+        <!-- Definition Section -->
+        <h3>How I Am Defined:</h3>
+        <p>I am a passionate learner who enjoys helping others and working as a reliable team player. I value clear communication and meaningful connections, which is why I’m proud to be part of the Friends Forever theme.</p>
+
+        <!-- Career Aspirations -->
+        <h3>Career Aspirations:</h3>
+        <p><strong>Short-Term Goals:</strong> Put my best foot forward in my studies.</p>
+        <p><strong>Long-Term Goals:</strong> Seat in top position to break  Complex career journey and make it easy for budding generation.</p>
+        
+        <p><strong>Register No.:</strong> 2023503016</p>
+        <p><strong>Email:</strong> <a href="mailto:sarunulagappan@gmail.com">sarunulagappan@gmail.com</a></p> <!-- Working email link -->
+        <p><strong>GitHub:</strong> <a href="https://github.com/ARUNULAGAPPAN" target="_blank">https://github.com/ARUNULAGAPPAN</a></p> <!-- Working GitHub link -->
+
+        <!-- Navigation Links to Other Pages -->
+        <p><a href="skills.html">My Skill Set</a></p> 
+        <p><a href="projects.html">Projects I Did</a></p>
+        <p><a href="organizations.html">Organizations I Am Involved In</a></p>
+        <p><a href="certifications.html">My Certifications</a></p>
+        <p><a href="interest.html">My Interests </a></p> 
+      
+    </center>
+    </div>
+
+    <!-- Chatbot at the Bottom -->
+    <div class="chatbot-container">
+        <div class="chatbot-header">Arun's chat Bot</div>
+        <div class="chatbot-body" id="chatbotBody">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        <div class="chatbot-input-container">
+            <input type="text" id="chatbotInput" class="chatbot-input" placeholder="Type a message...">
+            <button class="chatbot-send-btn" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        // Chatbot Logic
+        function sendMessage() {
+            var input = document.getElementById('chatbotInput');
+            var message = input.value.trim();
+            if (message === '') return;
+
+            // Display the user's message
+            var userMessage = '<div class="chatbot-message user-message">' + message + '</div>';
+            document.getElementById('chatbotBody').innerHTML += userMessage;
+
+            // Simulate a bot response (basic example)
+            var botMessage = '<div class="chatbot-message bot-message">I am here to help you, what would you like to know?</div>';
+            document.getElementById('chatbotBody').innerHTML += botMessage;
+
+            // Scroll to the bottom of the chat
+            var chatbotBody = document.getElementById('chatbotBody');
+            chatbotBody.scrollTop = chatbotBody.scrollHeight;
+
+            // Clear the input
+            input.value = '';
+        }
+    </script>
+</body>
+</html>
